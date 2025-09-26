@@ -1,0 +1,32 @@
+from src.chains.agent_for_chain import opening_for_chain,rebuttle_for_chain
+from src.state import Agentstate
+from langchain_core.messages import HumanMessage
+
+def agent_for(state:Agentstate):
+    """
+    Generates an argument for the topic, either an opening statement or a rebuttal.
+    It leverages the latest research summary if available and addresses the opponent's last argument.
+    """
+    topic=state["topic"]
+    updated_research_summaries = list(state["research_summary"])
+
+    research_summary_content=""
+    if state["research_summay"]:
+        research_summary_content=state["research_summary"][-1].content
+
+    opponent_last_argument=""
+    if state["arguments_against"]:
+        opponent_last_argument=state["arguments_against"][-1].content
+    
+
+
+    if opponent_last_argument:
+        rebuttle=rebuttle_for_chain.invoke({"topic":topic,"opponent_last_argument":opponent_last_argument,"research_summary":research_summary_content})
+
+        if updated_research_summaries:
+            updated_research_summaries.pop()
+    
+    else:
+        rebuttle=opening_for_chain.invoke({"topic":topic})
+
+    return {"arguments_for":[HumanMessage(content=rebuttle.content)],"research_summary":updated_research_summaries}

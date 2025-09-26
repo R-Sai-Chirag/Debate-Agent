@@ -29,7 +29,7 @@ Your opponent just argued:
 
 You have access to strategic intelligence from your research team:
 --- RESEARCH BRIEFING ---
-{research_briefing}
+{research_summary}
 --- END RESEARCH BRIEFING ---
 
 Your task:
@@ -44,8 +44,8 @@ Now, deliver your rebuttal.
 
 rebuttle_promtp=ChatPromptTemplate.from_messages([
     ("system",rebuttle_system),
-    ("user","The topic is:{topic} \n\n Opponenet Argument:{opponenet_argument} \n\n Research:{research_summary}.")
+    ("user","The topic is:{topic} \n\n Opponenet Argument:{opponent_last_argument} \n\n Research:{research_summary}.")
 ])
 
-opening_chain=opening_prompt|llm_for
-rebuttle_chain=rebuttle_promtp|llm_for
+opening_for_chain=opening_prompt|llm_for
+rebuttle_for_chain=rebuttle_promtp|llm_for

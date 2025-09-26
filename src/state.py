@@ -8,5 +8,5 @@ class Agentstate(TypedDict):
     turn_count:int
     current_turn:str
     debate_over:bool
-    research_summaries:Annotated[List,add_messages]
+    research_summary:Annotated[List,add_messages]
     final_judgement:str
