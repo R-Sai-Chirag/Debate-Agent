@@ -1,2 +1,4 @@
 langchain
 langchain_community
+langgraph
+langchain_groq
