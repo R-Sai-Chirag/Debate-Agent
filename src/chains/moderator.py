@@ -24,7 +24,7 @@ def moderator(state:Agentstate):
     turn_count=state["turn_count"]
     turn_count+=1
 
-    if turn_count>6:
+    if turn_count==2:
         print("---DEBATE TERMINATED TURN COUNT LIMIT REACHED---")
         return {"turn_count":turn_count,"debate_over":True}
     

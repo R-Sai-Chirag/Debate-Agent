@@ -8,7 +8,6 @@ def agent_for(state:Agentstate):
     It leverages the latest research summary if available and addresses the opponent's last argument.
     """
     topic=state["topic"]
-    updated_research_summaries = list(state["research_summary"])
 
     research_summary_content=""
     if state["research_summary"]:
@@ -23,10 +22,10 @@ def agent_for(state:Agentstate):
     if opponent_last_argument:
         rebuttle=rebuttle_for_chain.invoke({"topic":topic,"opponent_last_argument":opponent_last_argument,"research_summary":research_summary_content})
 
-        if updated_research_summaries:
-            updated_research_summaries.pop()
     
     else:
         rebuttle=opening_for_chain.invoke({"topic":topic})
 
-    return {"arguments_for":[HumanMessage(content=rebuttle.content)],"research_summary":updated_research_summaries}
+    updated_arguments_for = state["arguments_for"] + [HumanMessage(content=rebuttle.content)]
+
+    return {"arguments_for":updated_arguments_for,"research_summary":[]}

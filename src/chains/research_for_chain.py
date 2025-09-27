@@ -1,8 +1,11 @@
 from src.models.model import llm_search
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_tavily import TavilySearch
+from langchain_core.output_parsers import StrOutputParser
 from dotenv import load_dotenv
 load_dotenv()
+
+parser=StrOutputParser()
 
 web_search=TavilySearch(max_results=3)
 
@@ -31,4 +34,4 @@ research_for_prompt=ChatPromptTemplate.from_messages([
     ("user","The Topic is:{topic} \n\n The opponent Argument:{opponent_argument}.")
 ])
 
-for_question_generator=research_for_prompt|llm_search
+for_question_generator=research_for_prompt|llm_search|parser

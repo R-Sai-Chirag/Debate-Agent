@@ -1,5 +1,8 @@
 from src.models.model import llm_search
 from langchain_core.prompts import ChatPromptTemplate
+from langchain_core.output_parsers import StrOutputParser
+
+parser=StrOutputParser()
 
 system="""
 You are assisting a debate system. The debate motion is:
@@ -23,4 +26,4 @@ research_against_prompt=ChatPromptTemplate.from_messages([
     ("user","The Topic is:{topic} \n\n The opponent Argument:{opponent_argument}")
 ])
 
-against_question_generator=research_against_prompt|llm_search
+against_question_generator=research_against_prompt|llm_search|parser

@@ -25,10 +25,10 @@ Your task:
 
 Output format (example):
 
-* GPT-OSS-120B(agent_for): 8/10
-* LLAMA-3.3-70B(agent_against): 6/10
+* gemma2-9b-it(agent_for): 8/10
+* llama-3.1-8b-instant(agent_against): 6/10
 * Reasoning: [your explanation here]
-* **Winner: GPT-OSS-120B(agent_for)**
+* **Winner: gemma2-9b-it(agent_for)**
 
 """
 
