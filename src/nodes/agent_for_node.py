@@ -11,7 +11,7 @@ def agent_for(state:Agentstate):
     updated_research_summaries = list(state["research_summary"])
 
     research_summary_content=""
-    if state["research_summay"]:
+    if state["research_summary"]:
         research_summary_content=state["research_summary"][-1].content
 
     opponent_last_argument=""

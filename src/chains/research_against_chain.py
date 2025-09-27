@@ -10,15 +10,12 @@ The opponent (arguing in favor of the motion) just made this argument:
 "{opponent_argument}"
 
 Your task:
-- Reframe the opponent’s claim into a **search question** that will yield 
-  information useful for building counter-arguments **against the motion**.  
-- The question must explicitly target **evidence, criticisms, or drawbacks** that undermine 
-  the opponent’s claim.  
-- Generate 3 to 5 precise, web-searchable questions targeting evidence,or drawbacks
-  that weaken the opponent's argument. Output as a numbered list only.  
-- Keep it short, factual, and open-ended (not yes/no).  
+- Reframe the opponent’s claim into **3 to 5 precise, web-searchable questions** 
+  that will provide evidence, criticisms, or drawbacks to undermine the opponent’s claim.
 
-Output only the question.
+- Output only a numbered list of questions (no explanations).
+
+- Each question should be short, factual, and open-ended (not yes/no).
 """
 
 research_against_prompt=ChatPromptTemplate.from_messages([
