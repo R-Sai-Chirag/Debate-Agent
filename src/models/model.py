@@ -6,12 +6,12 @@ groq_api_key=os.getenv("GROQ_API_KEY")
 
 print("--MODELS INITIALIZED--")
 
-llm_for=ChatGroq(model="gemma2-9b-it",groq_api_key=groq_api_key)
+llm_for=ChatGroq(model="openai/gpt-oss-120b",groq_api_key=groq_api_key)
 
-llm_against=ChatGroq(model="llama-3.1-8b-instant",groq_api_key=groq_api_key)
+llm_against=ChatGroq(model="openai/gpt-oss-20b",groq_api_key=groq_api_key)
 
 llm_search=ChatGroq(model="gemma2-9b-it",groq_api_key=groq_api_key)
 
-llm_judge=ChatGroq(model="qwen/qwen3-32b",groq_api_key=groq_api_key)
+llm_judge=ChatGroq(model="openai/gpt-oss-20b",groq_api_key=groq_api_key)
 
-llm_summarizer=ChatGroq(model="qwen/qwen3-32b",groq_api_key=groq_api_key)
+llm_summarizer=ChatGroq(model="llama-3.1-8b-instant",groq_api_key=groq_api_key)

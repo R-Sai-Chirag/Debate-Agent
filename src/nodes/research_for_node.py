@@ -60,14 +60,14 @@ def research_for(state: Agentstate):
         questions = questions_output
 
     
-    questions = [q for q in questions if '?' in q]
+    questions_for= [q for q in questions if '?' in q]
     
-    print(f"\n[DEBUG] Generated Questions: {questions}\n")
+    print(f"\n[DEBUG] Generated Questions: {questions_for}\n")
 
     
     research_summary_list = []
-    if questions:
-        for q in questions:
+    if questions_for:
+        for q in questions_for:
             
             search_result = web_search.invoke({"query": q})
             
@@ -86,4 +86,4 @@ def research_for(state: Agentstate):
     
     print(f"\n[DEBUG] Final Aggregated Summary: '{research_summary}'\n")
 
-    return {"research_summary": [AIMessage(content=research_summary)]}
+    return {"research_summary": [AIMessage(content=research_summary)], "research_for_questions": questions_for}

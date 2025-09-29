@@ -3,3 +3,4 @@ langchain_community
 langgraph
 langchain_groq
 langchain_tavily
+streamlit

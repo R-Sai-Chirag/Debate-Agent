@@ -23,8 +23,9 @@ def moderator(state:Agentstate):
     
     turn_count=state["turn_count"]
     turn_count+=1
+    max_turns=state.get("max_turns",2)
 
-    if turn_count==2:
+    if turn_count==max_turns*2:
         print("---DEBATE TERMINATED TURN COUNT LIMIT REACHED---")
         return {"turn_count":turn_count,"debate_over":True}
     

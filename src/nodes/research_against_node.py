@@ -51,15 +51,15 @@ def research_against(state: Agentstate):
         questions = questions_output
 
     
-    questions = [q for q in questions if '?' in q]
+    questions_against= [q for q in questions if '?' in q]
     
     
-    print(f"\n[DEBUG] Generated Questions: {questions}\n")
+    print(f"\n[DEBUG] Generated Questions: {questions_against}\n")
 
     
     research_summary_list = []
-    if questions:
-        for q in questions:
+    if questions_against:
+        for q in questions_against:
             
             search_result = web_search.invoke({"query": q})
             
@@ -78,4 +78,4 @@ def research_against(state: Agentstate):
     # DEBUG STEP 3: Check the final aggregated summary
     print(f"\n[DEBUG] Final Aggregated Summary: '{research_summary}'\n")
 
-    return {"research_summary": [AIMessage(content=research_summary)]}
+    return {"research_summary": [AIMessage(content=research_summary)],"research_against_questions":questions_against}

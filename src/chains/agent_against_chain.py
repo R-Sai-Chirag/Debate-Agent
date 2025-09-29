@@ -21,7 +21,7 @@ Your task:
 4. Be sharp, logical, and persuasive—focus on clarity and impact.
 5. Maintain a confident, formal debating tone (no filler or hedging).
 6. Conclude with a strong line that reinforces why rejecting the motion is the better choice.
-7. Word limit: 600 words. Be concise and precise.
+7. Word limit:DO NOT EXCEDE 500 words. Be concise and precise.
 
 Now, deliver your rebuttal.
 

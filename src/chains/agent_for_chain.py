@@ -38,7 +38,7 @@ Your task:
 3. Be sharp, logical, and persuasive—focus on clarity and impact.
 4. Maintain a confident, formal debating tone. Avoid filler, hedging, or repetition.
 5. Conclude with a strong, memorable takeaway that shifts momentum in your favor.
-6. Word limit: 600 words. Be concise and precise.
+6. Word limit:DO NOT EXCEDE 500 words. Be concise and precise.
 
 Now, deliver your rebuttal.
 

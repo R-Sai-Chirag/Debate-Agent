@@ -18,17 +18,17 @@ The two sides have made the following arguments:
 Your task:
 
 1. Evaluate both sides’ arguments based on **clarity, evidence, logic, and persuasiveness**.
-2.Do not be biased toward either side.
+2. Do not be biased toward either side.
 3. Assign each side a score from **1 to 10** (higher is better).
 4. Provide a short explanation (2–3 sentences) of why you gave these scores.
 5. Declare the winner explicitly.
 
-Output format (example):
+Output(example):
 
-* gemma2-9b-it(agent_for): 8/10
-* llama-3.1-8b-instant(agent_against): 6/10
+* GPT-OSS-120B(agent_for): 8/10
+* GPT-OSS-20B(agent_against): 6/10
 * Reasoning: [your explanation here]
-* **Winner: gemma2-9b-it(agent_for)**
+* **Winner: GPT-OSS-120B(agent_for)**
 
 """
 
